@@ -34,9 +34,9 @@ function obtenerResultado(usuario, ordenador) {
     (usuario === "papel" && ordenador === "piedra") ||
     (usuario === "tijera" && ordenador === "papel")
   ) {
-    return "Ganaste";
-  } else {
     return "Perdiste";
+  } else {
+    return "Ganaste";
   }
 }
 
@@ -44,11 +44,11 @@ function obtenerResultado(usuario, ordenador) {
 function mostrarResultado(resultado, eleccionUsuario, eleccionOrdenador) {
     let mensaje;
     if (resultado === 'Ganaste') {
-        mensaje = `Has ganado esta ronda: ${eleccionUsuario}. Máquina: ${eleccionOrdenador}.`
+        mensaje = `¡Has ganado! 🥳 Elegiste: ${eleccionUsuario}. La Máquina: ${eleccionOrdenador}.`
     } else if (resultado === 'Perdiste') {
-        mensaje = `Has perdido esta ronda: ${eleccionUsuario}. Máquina: ${eleccionOrdenador}.`
+        mensaje = `¡Has perdido! ☹️ Elegiste: ${eleccionUsuario}. La Máquina: ${eleccionOrdenador}.`
     } else {
-        mensaje = `Empate ambos eligieron ${eleccionUsuario}.`
+        mensaje = `🙌🏼 ¡Empate!, ambos elegisteis ${eleccionUsuario}.`
     }
     contadorResultados.innerHTML = mensaje;
 }
